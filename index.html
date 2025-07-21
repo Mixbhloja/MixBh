@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MIXBH Serviços Digitais</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: linear-gradient(135deg, #3f51b5, #673ab7);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 80px;
+      vertical-align: middle;
+    }
+
+    .header-title {
+      display: inline-block;
+      margin-left: 15px;
+      font-size: 24px;
+      vertical-align: middle;
+    }
+
+    nav {
+      background: #fff;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .service-button {
+      margin: 5px;
+      padding: 10px 20px;
+      background: #3f51b5;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .service-button:hover {
+      background: #5c6bc0;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .service-info {
+      display: none;
+      margin-top: 15px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo_mixbh.png" alt="Logo MIXBH" class="logo">
+  <span class="header-title">MIXBH Serviços Digitais</span>
+</header>
+
+<nav>
+  <button class="service-button" onclick="showInfo('mei')">MEI</button>
+  <button class="service-button" onclick="showInfo('inss')">INSS</button>
+  <button class="service-button" onclick="showInfo('detran')">DETRAN</button>
+  <button class="service-button" onclick="showInfo('cemig')">CEMIG</button>
+  <button class="service-button" onclick="showInfo('copasa')">COPASA</button>
+</nav>
+
+<div class="content">
+  <h2>Sobre a MixBH</h2>
+  <p>
+    Fundada em 2003, a MixBH começou com reciclagem de cartuchos. Evoluímos para um Centro de Conveniência Digital com serviços públicos e manutenção digital ao alcance de todos.
+  </p>
+
+  <div id="mei" class="service-info">
+    <h3>MEI - Microempreendedor Individual</h3>
+    <p>Cadastro, emissão de DAS, regularização, orientação sobre declaração anual e acesso a benefícios.</p>
+  </div>
+
+  <div id="inss" class="service-info">
+    <h3>INSS</h3>
+    <p>Consulta de benefícios, agendamento, extrato, simulação de aposentadoria e mais.</p>
+  </div>
+
+  <div id="detran" class="service-info">
+    <h3>DETRAN</h3>
+    <p>Consulta de multas, renovação de CNH, IPVA, agendamento de vistoria e outros serviços.</p>
+  </div>
+
+  <div id="cemig" class="service-info">
+    <h3>CEMIG</h3>
+    <p>2ª via da conta, religação, mudança de titularidade, consumo e débitos.</p>
+  </div>
+
+  <div id="copasa" class="service-info">
+    <h3>COPASA</h3>
+    <p>2ª via da conta, histórico de consumo, débitos, parcelamentos, reclamações e serviços gerais.</p>
+  </div>
+
+  <h3>Contato</h3>
+  <p>
+    📍 Endereço: Av. Doutor Álvaro Camargos, 1679 - Loja 01 - Santa Branca, BH - MG<br>
+    📞 WhatsApp: <a href="https://wa.me/5531991648104" target="_blank">(31) 99164-8104</a><br>
+    📧 E-mail: <a href="mailto:mixbh@outlook.com">mixbh@outlook.com</a>
+  </p>
+
+  <iframe src="https://www.google.com/maps?q=Avenida+Doutor+Álvaro+Camargos,+1679,+Belo+Horizonte+-+MG&output=embed"></iframe>
+</div>
+
+<footer>
+  &copy; 2025 MIXBH Serviços Digitais. Todos os direitos reservados.
+</footer>
+
+<script>
+  function showInfo(serviceId) {
+    const sections = document.querySelectorAll('.service-info');
+    sections.forEach(section => section.style.display = 'none');
+    document.getElementById(serviceId).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
